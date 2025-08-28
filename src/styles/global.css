@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html, body {
+    max-width: 100%;
+    overflow-x: clip
+}
+
+@import "tailwindcss";
+
+@theme {
+/* Primary Neutral Palette */
+  --color-primary-900: #1D1178;
+  --color-primary-800: #2D1D92;
+  --color-primary-700: #432EB5;
+  --color-primary-600: #5E43D8;
+  --color-primary-500: #7C5CFC;
+  --color-primary-400: #9F84FD;
+  --color-primary-300: #B49DFE;
+  --color-primary-200: #CEBEFE;
+  --color-primary-100: #E7DEFE;
+  --color-primary-0: #FFFFFF;
+
+  /* Success Colors */
+  --color-success-900: #3B6506;
+  --color-success-800: #4C7A0B;
+  --color-success-700: #659711;
+  --color-success-600: #7FB519;
+  --color-success-500: #9CD323;
+  --color-success-400: #BCE455;
+  --color-success-300: #D3F178;
+  --color-success-200: #E8FAA6;
+  --color-success-100: #F5FCD2;
+
+  /* Error Colors */
+  --color-error-900: #7A0619;
+  --color-error-800: #930B16;
+  --color-error-700: #B71112;
+  --color-error-600: #DB2719;
+  --color-error-500: #FF4423;
+  --color-error-400: #FF7F59;
+  --color-error-300: #FFA37A;
+  --color-error-200: #FFC8A6;
+  --color-error-100: #FFE7D3;
+
+  /* Warning Colors */
+  --color-warning-900: #7A4D0B;
+  --color-warning-800: #936312;
+  --color-warning-700: #B7821D;
+  --color-warning-600: #DBA32A;
+  --color-warning-500: #FFC73A;
+  --color-warning-400: #FFD96B;
+  --color-warning-300: #FFE488;
+  --color-warning-200: #FFEFB0;
+  --color-warning-100: #FFF8D7;
+
+  /* Information Colors */
+  --color-info-900: #102E7A;
+  --color-info-800: #1A4393;
+  --color-info-700: #2A60B7;
+  --color-info-600: #3D81DB;
+  --color-info-500: #54A6FF;
+  --color-info-400: #7EC2FF;
+  --color-info-300: #98D3FF;
+  --color-info-200: #BAE5FF;
+  --color-info-100: #DCF3FF;
+
+  /* Secondary Colors */
+  --color-secondary-900: #040815;
+  --color-secondary-800: #080C19;
+  --color-secondary-700: #0D121F;
+  --color-secondary-600: #131825;
+  --color-secondary-500: #1A202C;
+  --color-secondary-400: #596780;
+  --color-secondary-300: #90A3BF;
+  --color-secondary-200: #C3D4E9;
+  --color-secondary-100: #F3F5F7;
+
+    --font-primary: "Plus jakarta Sans", sans-serif;
+
+    --font-weight-thin: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    --font-sizes: {
+        xs: 0.75rem,
+        sm: 0.875rem,
+        base: 1rem,
+        lg: 1.125rem,
+        xl: 1.25rem,
+        '2xl': 1.5rem,
+        '3xl': 1.875rem,
+        '4xl': 2.25rem,
+        '5xl': 3rem,
+        '6xl': 3.75rem,
+        '7xl': 4.5rem,
+        '8xl': 6rem,
+        '9xl': 8rem
+    };
+
+}
+
+

@@ -1,0 +1,57 @@
+---
+import Websitelogo from "../assets/icons/Logospendin.svg";
+import Arrowdown from "../assets/icons/arrow-down.svg";
+import Openmenu from "../assets/icons/iconopenmenu.svg";
+---
+<header id="header" class="relative flex justify-center bg-secondary-700 font-primary text-primary-0 text-lg">
+    <div class="absolute w-225 h-225 -top-110 -right-95 border-primary-0/5 border-75 lg:border-125 rounded-full"></div>
+    <div class="absolute w-225 h-225 -top-120 -left-95  bg-primary-0/5 blur-3xl rounded-full"></div>
+    <nav id="nav" class="container flex justify-between border-primary lg:max-w-7xl h-24 gap-32 z-10" x-data="{ mobileMenu: false}">
+
+        <!-- Large screen navigattion bar -->
+            <a href="#" class="flex items-center">
+                <Websitelogo class="fill-primary-200" />
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 font-regular">
+                <li>
+                    <a href="#" class="flex items-center gap-1">
+                        Product
+                        <Arrowdown class="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        Benefit
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        Pricing
+                    </a>
+                </li>
+                <a href="#" class="flex items-center gap-1">
+                        Company
+                        <Arrowdown class="" />
+                    </a>
+            </ul>
+            <div class="hidden lg:flex items-center gap-8">
+                <button>
+                    Login
+                </button>
+                <button class="flex bg-primary-500 rounded-full items-center justify-center px-6 py-3">
+                    Get Demo
+                </button>
+            </div>
+        <!-- Small screen navigation bar -->
+        <button class="lg:hidden">
+            <Openmenu />
+        </button>
+        
+    </nav>
+
+</header>
