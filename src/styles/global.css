@@ -2,7 +2,7 @@
 
 html, body {
     max-width: 100%;
-    overflow-x: clip
+    overflow-x: hidden
 }
 
 @import "tailwindcss";
@@ -86,14 +86,16 @@ html, body {
     --font-weight-extrabold: 800;
 
     --font-sizes: {
-        xs: 0.75rem,
-        sm: 0.875rem,
-        base: 1rem,
-        lg: 1.125rem,
-        xl: 1.25rem,
-        '2xl': 1.5rem,
-        '3xl': 1.875rem,
-        '4xl': 2.25rem,
+        xs: 12px,
+        sm: 14px,
+        base: 16px,
+        lg: 18px,
+        lg-20: 20px,
+        xl: 24px,
+        xl-32: 32px,
+        '2xl': 36px,
+        '3xl': 40px,
+        '4xl': 72px,
         '5xl': 3rem,
         '6xl': 3.75rem,
         '7xl': 4.5rem,

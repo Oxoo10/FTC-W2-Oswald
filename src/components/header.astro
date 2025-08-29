@@ -1,16 +1,16 @@
 ---
-import Websitelogo from "../assets/icons/Logospendin.svg";
+import Websitelogo from "../assets/icons/WebsitelogoMonochrome.svg";
 import Arrowdown from "../assets/icons/arrow-down.svg";
 import Openmenu from "../assets/icons/iconopenmenu.svg";
 ---
-<header id="header" class="relative flex justify-center bg-secondary-700 font-primary text-primary-0 text-lg">
-    <div class="absolute w-225 h-225 -top-110 -right-95 border-primary-0/5 border-75 lg:border-125 rounded-full"></div>
-    <div class="absolute w-225 h-225 -top-120 -left-95  bg-primary-0/5 blur-3xl rounded-full"></div>
-    <nav id="nav" class="container flex justify-between border-primary lg:max-w-7xl h-24 gap-32 z-10" x-data="{ mobileMenu: false}">
+<header id="header" class="relative flex justify-center bg-secondary-700 font-primary text-primary-0 text-lg px-7">
+    <div class="absolute w-150 h-150 lg:w-225 lg:h-225 -top-90 -right-75 lg:-top-110 lg:-right-95 border-primary-0/5 border-75 lg:border-125 rounded-full"></div>
+    <div class="absolute w-115 h-115 top-0 left-0  bg-primary-0/5 blur-3xl rounded-br-full"></div>
+    <nav id="nav" class="container flex justify-between border-primary max-w-7xl h-24 gap-8 z-10" x-data="{ mobileMenu: false}">
 
         <!-- Large screen navigattion bar -->
             <a href="#" class="flex items-center">
-                <Websitelogo class="fill-primary-200" />
+                <Websitelogo class="text-primary-100" />
             </a>
             <ul class="hidden lg:flex items-center gap-8 font-regular">
                 <li>
@@ -40,10 +40,10 @@ import Openmenu from "../assets/icons/iconopenmenu.svg";
                     </a>
             </ul>
             <div class="hidden lg:flex items-center gap-8">
-                <button>
+                <button class="hover:text-secondary-200 transition cursor-pointer" >
                     Login
                 </button>
-                <button class="flex bg-primary-500 rounded-full items-center justify-center px-6 py-3">
+                <button class="flex bg-primary-500 rounded-full items-center justify-center hover:bg-primary-400 transition cursor-pointer px-6 py-3">
                     Get Demo
                 </button>
             </div>

@@ -1,4 +1,5 @@
 ---
+import Websitelogo from "../assets/icons/Logospendin.svg";
 import Layout from "../layouts/layout.astro";
 import Dashboard from "../assets/images/Dashboard.svg";
 import Autopay from "../assets/images/autopayment.svg";
@@ -31,27 +32,27 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 <Layout>
 	<section
 		id="hero"
-		class="flex flex-col justify-left lg:justify-center bg-secondary-700 text-primary-0 font-primary px-7"
+		class="flex flex-col justify-left lg:justify-center bg-secondary-700 text-primary-0 font-primary px-7 "
 	>
 		<div
-			class="absolute w-225 h-225 -bottom-70 -left-120 border-primary-0/5 border-75 lg:border-125 rounded-full"
+			class="absolute w-150 h-150 lg:w-225 lg:h-225 -bottom-50 -left-100 lg:-bottom-70 lg:-left-120 border-primary-0/5 border-75 lg:border-125 rounded-full"
 		>
 		</div>
 		<div
-			class="absolute w-225 h-225 -bottom-70 -right-95 bg-primary-0/5 blur-2xl rounded-full"
+			class="absolute w-115 h-115 bottom-0 -right-0 bg-primary-0/5 blur-3xl rounded-tl-full"
 		>
 		</div>
 		<div
 			class="flex flex-col items-left lg:items-center z-10 gap-10 lg:gap-20"
 		>
-			<div class="flex flex-col lg:items-center gap-6 pt-38">
+			<div class="flex flex-col lg:items-center gap-6 pt-10 lg:pt-38">
 				<h1
-					class="text-4xl lg:text-5xl text-left lg:text-center font-bold leading-normal"
+					class="flex-shrink text-[clamp(36px,9vw,72px)] font-semibold leading-normal text-left lg:text-center"
 				>
-					All your business<br /> expenses in one place.
+					All your<br class="lg:hidden" /> business<br class="hidden lg:block" /> expenses in one place.
 				</h1>
 				<div
-					class="text-lg lg:text-xl font-regular leading-relaxed text-subtitle"
+					class="text-lg lg:text-xl font-regular leading-relaxed text-subtitle text-secondary-300"
 				>
 					<p class="text-left lg:text-center">
 						Your one-stop finance empower platform.
@@ -65,12 +66,12 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 					class="flex flex-col lg:flex-row justify-start lg:justify-center gap-6 lg:gap-6 w-full mx-auto"
 				>
 					<button
-						class="flex bg-primary-500 rounded-full items-center justify-center px-6 py-3"
+						class="flex bg-primary-500 rounded-full items-center justify-center hover:bg-primary-400 transition cursor-pointer px-6 py-3"
 					>
 						Get a Free Demo
 					</button>
 					<button
-						class="flex lg:bg-secondary-500 rounded-full items-center text-textsecondary justify-center px-6 py-3"
+						class="flex lg:bg-secondary-500 rounded-full items-center text-secondary-400 justify-center px-6 py-3 hover:bg-secondary-200 transition cursor-pointer"
 					>
 						See pricing
 					</button>
@@ -78,6 +79,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 			</div>
 			<Dashboard class="w-full" />
 		</div>
+	</section>
 
 		<!-- Benefits 1 -->
 		<section
@@ -86,17 +88,15 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 		>
 			<!-- Header -->
 			<div
-				class="grid grid-cols-3 w-full lg:w-7xl mx-auto gap-6 pb-10 items-start px-7"
+				class="grid grid-cols-1 lg:grid-cols-3 w-full lg:w-7xl mx-auto gap-1 pb-10 items-start px-7 "
 			>
-				<div class="text-primary-500">WHY USE SPEND.IN</div>
+				<div class="text-primary-500 font-semibold text-xs lg:text-lg">WHY USE SPEND.IN</div>
 				<div class="col-span-2"></div>
-				<div class="text-4xl text-secondary-900 font-bold leading-snug">
+				<div class="text-xl lg:text-3xl text-secondary-900 font-bold leading-snug">
 					Easy, Simple,<br /> Affordable
 				</div>
-				<div class="col-span-2 text-xl">
-					Our platform helps your business manage<br />expenses. Here
-					are some of the reasons why you<br />should use our platform
-					to handle business finances.
+				<div class="text-sm lg:text-lg col-span-2">
+					Our platform helps your business in managing <br class="hidden lg:block"/>expenses.  These are some of the reasons why you<br class="hidden lg:block"/>should use our platform in managing business finances.
 				</div>
 			</div>
 
@@ -105,117 +105,114 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				class="grid grid-cols-1 md:grid-cols-3 items-start gap-6 max-w-7xl mx-auto px-7"
 			>
 				<!-- Feature 1 -->
-				<div class="flex flex-col gap-6">
-					<Autopay class="w-full" />
-					<div class="text-2xl font-bold text-secondary-900">
+				<div class="flex flex-col gap-3">
+					<Autopay class="w-full h-auto" />
+					<div class=" text-lg lg:text-xl font-bold text-secondary-900">
 						Automatic Invoice Payment
 					</div>
-					<div>
-						No need to pay manually—we provide an automatic invoice
-						payment service! Just set a payment schedule and you’re
-						done. It’s that easy!
+					<div class="text-xs lg:text-base">
+						No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!
 					</div>
 				</div>
 
 				<!-- Feature 2 -->
-				<div class="flex flex-col gap-6">
-					<Clearpay class="w-full" />
-					<div class="text-2xl font-bold text-secondary-900">
+				<div class="flex flex-col gap-3">
+					<Clearpay class="w-full h-auto" />
+					<div class="text-lg lg:text-xl font-bold text-secondary-900">
 						Clear Payment History
 					</div>
-					<div class="text-base">
-						Still recording expenses manually? Our platform breaks
-						down every expense you log—down to the millisecond!
+					<div class="text-xs lg:text-base">
+						Still writing manual expenses? Our platform breaks down every expense you log down to the millisecond!
 					</div>
 				</div>
 
 				<!-- Feature 3 -->
-				<div class="flex flex-col gap-6">
-					<MultiPay class="w-full" />
-					<div class="text-2xl font-bold text-secondary-900">
+				<div class="flex flex-col gap-3">
+					<MultiPay class="w-full h-auto" />
+					<div class="text-lg lg:text-xl font-bold text-secondary-900">
 						Multi-Card Payments
 					</div>
-					<div>
-						Have more than one bank account or credit/debit card?
-						Our platform integrates with banks worldwide for easier
-						payments!
+					<div class="text-xs lg:text-base">
+						Have more than 1 bank account or credit/debit card? Our platform is already integrated with many banks around the world, for easier payments!
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Benefist 2 -->
+		<!-- Benefit 2 -->
 		<section
 			id="Benefit2"
 			class="flex flex-col pb-30 font-primary text-secondary-400"
 		>
 			<div
-				class="flex flex-col justify-start lg:justify-between mx-auto text-left lg:text-center gap-6 w-full lg:w-7xl px-7"
+				class="flex flex-col justify-start lg:justify-between mx-auto text-left lg:text-center w-full lg:w-7xl px-7 gap-6"
 			>
 				<!-- Header -->
-				<div class="text-primary-500">WHY USE SPEND.IN</div>
-				<div class="text-4xl font-bold leading-snug text-secondary-500">
-					Easy, Simple, Affordable
+				<div class="text-primary-500 font-semibold text-xs lg:text-lg">WHY USE SPEND.IN</div>
+				<div class="text-xl lg:text-3xl font-bold leading-snug text-secondary-500">
+					Easy, Simple,<br class=" lg:hidden"> Affordable
 				</div>
-				<div class="col-span-2 text-secondary-400/64">
+				<div class="text-sm lg:text-lg col-span-2 text-secondary-400 lg:text-secondary-400/64">
 					Our platform helps your business in managing expenses. These
-					are some of the<br /> reasons why you should use our platform
+					are some of the<br class="hidden lg:block"/> reasons why you should use our platform
 					in managing business finances.
 				</div>
 
 				<!-- Card left -->
-				<div class="grid grid-rows lg:grid-cols-2 gap-24 items-center">
-					<div class="flex flex-col text-left gap-11">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+					<div class="flex flex-col text-left gap-3">
 						<!-- Feature 1 -->
-						<div class="flex gap-8">
-							<AutoPayinv class="w-12 h-12 shrink-0" />
-							<div class="flex flex-col items-start gap-3">
-								<div
-									class="text-2xl font-bold text-secondary-500"
-								>
-									Automatic Invoice Payment
-								</div>
-								<div class="text-texttertiary">
-									Automatic payments help you to arrange
-									payments on a certain date without doing it
-									manually again.
-								</div>
+						<div class="flex gap-4">
+						<AutoPayinv class="w-7 lg:w-12 shrink-0" />
+						<div class="flex flex-col gap-2">
+							<div class="flex items-center gap-3">
+							<div class="text-lg lg:text-xl font-bold text-secondary-500">
+								Automatic Invoice Payment
+							</div>
+							</div>
+							<div class="text-xs lg:text-base">
+							Automatic payments help you to arrange
+							payments on a certain date without doing it
+							manually again.
 							</div>
 						</div>
+						</div>
+
 						<!-- Feature 2 -->
-						<div class="flex gap-8">
-							<IconPayHist class="w-12 shrink-0" />
-							<div class="flex flex-col items-start gap-3">
-								<div
-									class="text-2xl font-bold text-left text-secondary-500"
-								>
-									Clear payment history
-								</div>
-								<div class="text-texttertiary text-left">
-									Clear payment history helps you to track
-									your business expenses on specific dates.
-								</div>
+						<div class="flex gap-4">
+						<IconPayHist class="w-7 lg:w-12 shrink-0" />
+						<div class="flex flex-col gap-2">
+							<div class="flex items-center gap-3">
+							<div class="text-lg lg:text-xl font-bold text-secondary-500">
+								Clear payment history
+							</div>
+							</div>
+							<div class="text-xs lg:text-base">
+							Clear payment history helps you to track
+							your business expenses on specific dates.
 							</div>
 						</div>
+						</div>
+
 						<!-- Feature 3 -->
-						<div class="flex gap-8">
-							<MultiCard class="w-12 h-12 shrink-0" />
-							<div class="flex flex-col items-start gap-3">
-								<div
-									class="text-2xl font-bold text-left text-secondary-500"
-								>
-									Use of multi-card payments
-								</div>
-								<div class="text-texttertiary text-left">
-									Have more than one debit or credit card?
-									Don't worry, we support payments using more
-									than one card.
-								</div>
+						<div class="flex gap-4">
+						<MultiCard class="w-7 lg:w-12 shrink-0" />
+						<div class="flex flex-col gap-2">
+							<div class="flex items-center gap-3">
+							<div class="text-lg lg:text-xl font-bold text-secondary-500">
+								Use of multi-card payments
 							</div>
+							</div>
+							<div class="text-xs lg:text-base">
+							Have more than one debit or credit card?
+							Don't worry, we support payments using more
+							than one card.
+							</div>
+						</div>
 						</div>
 						<!-- Card right -->
 					</div>
-					<Transactionhist />
+					<Transactionhist class="w-full h-auto"/>
 				</div>
 			</div>
 		</section>
@@ -238,11 +235,11 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 			<div
 				class="flex flex-col justify-start lg:justify-between mx-auto text-left lg:text-center gap-6 w-full max-w-7xl px-7 text-primary"
 			>
-				<div class="text-primary-500 tracking-wide">HOW IT WORKS</div>
-				<div class="text-4xl font-bold leading-snug text-primary">
+				<div class="text-primary-500 font-semibold text-xs lg:text-lg tracking-wide">HOW IT WORKS</div>
+				<div class="text-xl lg:text-3xl font-bold leading-snug text-primary">
 					Few Easy Steps and Done
 				</div>
-				<div class="text-texttertiary">
+				<div class="text-sm lg:text-lg col-span-2 text-secondary-400">
 					In just few easy step, you are all set to manage your
 					business finances.<br class="hidden lg:flex" /> Manage all expenses
 					with Spend.In all in one place.
@@ -250,7 +247,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 
 				<!-- Features -->
 				<div
-					class="grid grid-cols-1 lg:grid-cols-3 lg:justify-center lg:w-[944px] mx-auto gap-37"
+					class="grid grid-cols-1 lg:grid-cols-3 lg:justify-center lg:w-[944px] text-center mx-auto gap-37"
 				>
 					<!-- Features 1 -->
 					<div class="relative flex flex-col gap-6">
@@ -262,7 +259,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 						<Register
 							class="pt-5 pl-5 w-full lg:w-[200px] h-[200px] rounded-2xl"
 						/>
-						<div class="">
+						<div class="text-xs lg:text-base">
 							Register your<br /> Spend.In account.
 						</div>
 					</div>
@@ -277,7 +274,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 						<Expenses
 							class="pt-5 pl-5 w-full lg:w-[200px] h-[200px] rounded-2xl"
 						/>
-						<div class="">
+						<div class="text-xs lg:text-base">
 							Fill in the list of your<br />business expenses.
 						</div>
 					</div>
@@ -292,7 +289,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 						<Done
 							class="pt-5 pl-5 w-full lg:w-[200px] h-[200px] rounded-2xl"
 						/>
-						<div class="">Done, let’s<br />continue the work.</div>
+						<div class="text-xs lg:text-base">Done, let’s<br />continue the work.</div>
 					</div>
 				</div>
 
@@ -301,12 +298,12 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 					class="flex flex-col lg:flex-row justify-start lg:justify-center gap-6 lg:gap-6 w-full pt-16 mx-auto"
 				>
 					<button
-						class="flex bg-primary-500 rounded-full items-center justify-center px-6 py-3"
+						class="flex bg-primary-500 rounded-full items-center justify-center px-6 py-3 hover:bg-primary-400 transition cursor-pointer"
 					>
 						Get a Free Demo
 					</button>
 					<button
-						class="flex lg:bg-secondary-500 rounded-full items-center text-textsecondary justify-center px-6 py-3"
+						class="flex lg:bg-secondary-500 rounded-full items-center text-textsecondary justify-center px-6 py-3 hover:bg-secondary-200 transition cursor-pointer"
 					>
 						See pricing
 					</button>
@@ -316,96 +313,94 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 
 		<!-- How it works 2 -->
 		<section
-			id="works2"
-			class="relative flex justify-center bg-background font-primary text-primary-0 bg-secondary-700 py-32"
-		>
-			<!-- Blur background effect -->
-			<div
-				class="absolute w-225 h-225 -bottom-70 -right-95 bg-primary-0/5 blur-2xl rounded-full"
-			>
-			</div>
-			<div
-				class="absolute w-225 h-225 -top-120 -left-95 bg-primary-0/5 blur-3xl rounded-full"
-			>
-			</div>
+  id="works2"
+  class="relative flex justify-center bg-secondary-700 font-primary text-primary-0 py-32"
+>
+  <!-- Blur background effect -->
+  <div
+    class="absolute w-115 h-115 bottom-0 right-0 bg-primary-0/5 blur-3xl rounded-tl-full"
+  ></div>
+  <div
+    class="absolute w-115 h-115 top-0 left-0 bg-primary-0/5 blur-3xl rounded-tr-full"
+  ></div>
 
-			<!-- Header -->
-			<div
-				class="grid grid-rows lg:grid-cols-2 gap-24 items-center w-fullmax-w-[1200px] px-7"
-			>
-				<div class="order-1 lg:order-2 flex flex-col text-left gap-11">
-					<div
-						class="flex flex-col justify-start mx-auto text-left gap-6 w-full max-w-7xl text-primary"
-					>
-						<div class="text-primary-500 tracking-wide">
-							HOW IT WORKS
-						</div>
-						<div
-							class="text-4xl font-bold leading-snug text-primary"
-						>
-							Few Easy Steps and Done
-						</div>
-						<div class="text-texttertiary">
-							In just few easy step, you are all set to manage
-							your business finances.<br class="hidden lg:flex" />
-							Manage all expenses with Spend.In all in one place.
-						</div>
-					</div>
+  <!-- Content -->
+  <div
+    class="grid grid-rows-1 lg:grid-cols-2 gap-24 items-center w-full max-w-[1200px] px-7"
+  >
+    <!-- Left text + steps -->
+    <div class="order-1 lg:order-2 flex flex-col text-left gap-11">
+      <div
+        class="flex flex-col justify-start mx-auto text-left gap-6 w-full max-w-7xl text-primary"
+      >
+        <div class="text-primary-500 font-semibold text-xs lg:text-lg">
+          HOW IT WORKS
+        </div>
+        <div class="text-xl lg:text-3xl font-bold leading-snug text-primary">
+          Few Easy Steps and Done
+        </div>
+        <div class="text-texttertiary">
+          In just few easy step, you are all set to manage
+          your business finances.<br class="hidden lg:flex" />
+          Manage all expenses with Spend.In all in one place.
+        </div>
+      </div>
 
-					<!-- Features -->
-					<div
-						class="relative flex flex-col bg-backgroundsecondary w-[526px] h-[288px] rounded-3xl gap-11 p-7"
-					>
-						<div
-							class="absolute top-19 left-13 h-12 border-l-3 border-primary-500"
-						>
-						</div>
-						<div
-							class="absolute top-43 left-13 h-12 border-l-3 border-dashed border-primary"
-						>
-						</div>
+      <!-- Features -->
+      <div
+        class="relative flex flex-col bg-secondary-500 w-full lg:w-full rounded-3xl gap-11 p-7"
+      >
+        <div
+          class="absolute top-19 left-13 h-12 border-l-3 border-primary-500"
+        ></div>
+        <div
+          class="absolute top-43 left-13 h-12 border-l-3 border-dashed border-primary"
+        ></div>
 
-						<!-- Features 1 -->
-						<div class="flex items-center gap-4">
-							<div
-								class="flex items-center justify-center bg-primary-500 w-[50px] h-[50px] rounded-full font-primary font-bold text-2x text-primary text-center"
-							>
-								1
-							</div>
-							<div>Register your Spend.In account.</div>
-						</div>
+        <!-- Feature 1 -->
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center justify-center bg-primary-500 w-[50px] h-[50px] rounded-full font-primary font-bold text-2xl text-primary text-center"
+          >
+            1
+          </div>
+          <div class="text-xs lg:text-base">
+            Register your Spend.In account.
+          </div>
+        </div>
 
-						<!-- Features 2 -->
-						<div class="flex items-center gap-4">
-							<div
-								class="flex items-center justify-center bg-primary-500 w-[50px] h-[50px] rounded-full font-primary font-bold text-2x text-primary text-center"
-							>
-								2
-							</div>
-							<div>
-								Fill in the list of your business expenses.
-							</div>
-						</div>
+        <!-- Feature 2 -->
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center justify-center bg-primary-500 w-[50px] h-[50px] rounded-full font-primary font-bold text-2xl text-primary text-center"
+          >
+            2
+          </div>
+          <div class="text-xs lg:text-base">
+            Fill in the list of your business expenses.
+          </div>
+        </div>
 
-						<!-- Features 3-->
-						<div class="flex items-center gap-4">
-							<div
-								class="flex items-center justify-center bg-primary-0 w-[50px] h-[50px] rounded-full font-primary font-bold text-2x text-secondary-500 text-center"
-							>
-								3
-							</div>
-							<div>Done, let’s continue the work.</div>
-						</div>
-					</div>
-				</div>
+        <!-- Feature 3 -->
+        <div class="flex items-center gap-4">
+          <div
+            class="flex items-center justify-center bg-primary-0 w-[50px] h-[50px] rounded-full font-primary font-bold text-2xl text-secondary-500 text-center"
+          >
+            3
+          </div>
+          <div class="text-xs lg:text-base">
+            Done, let’s continue the work.
+          </div>
+        </div>
+      </div>
+    </div>
 
-				<!-- Image -->
-				<div class="order-2 lg:order-1 flex justify-start">
-					<Works class="w-full max-w-[500px] h-auto" />
-				</div>
-			</div>
-		</section>
-	</section>
+    <!-- Image -->
+    <div class="order-2 lg:order-1 flex justify-start">
+      <Works class="w-full h-auto" />
+    </div>
+  </div>
+</section>
 
 	<!-- Increase productivity -->
 	<section
@@ -417,13 +412,17 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 		>
 			<!-- Top content spanning -->
 			<div class="col-span-1 lg:col-span-2 flex flex-col gap-6">
-				<div class="text-primary-500 tracking-wide">
+				<div class="text-primary-500 font-semibold text-xs lg:text-lg tracking-wide">
 					INCREASE PRODUCTIVITY
 				</div>
-				<div class="text-4xl font-bold leading-snug">
-					Reduce Time in Doing Manual Work<br
+				<div class="text-xl lg:text-3xl font-bold leading-snug">
+					Reduce Time in Doing<br
+						class="lg:hidden"
+					/> Manual Work<br
 						class="hidden lg:block"
-					/>Managing Expenses
+					/> Managing<br
+						class="lg:hidden"
+					/> Expenses
 				</div>
 			</div>
 
@@ -435,15 +434,15 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				>
 					<button
 						@click="tab = 'with'"
-						class="flex-1 flex items-center justify-center rounded-full h-[52px] px-6 py-3 transition"
-						:class="tab === 'with' ? 'bg-primary-500 text-primary-0' : 'text-secondary-300'"
+						class="flex-1 flex items-center justify-center rounded-full h-[52px] px-6 py-3 transition "
+						:class="tab === 'with' ? 'bg-primary-500 text-primary-0' : 'text-secondary-300 hover:bg-secondary-200 transition cursor-pointer'"
 					>
 						With Spend.in
 					</button>
 					<button
 						@click="tab = 'without'"
 						class="flex-1 flex items-center justify-center rounded-full h-[52px] px-6 py-3 transition"
-						:class="tab === 'without' ? 'bg-primary-500 text-primary-0' : 'text-secondary-300'"
+						:class="tab === 'without' ? 'bg-primary-500 text-primary-0' : 'text-secondary-300 hover:bg-secondary-200 transition cursor-pointer'"
 					>
 						Without Spend.in
 					</button>
@@ -451,17 +450,17 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 
 				<!-- With Spend.in -->
 				<div x-show="tab === 'with'" class="flex flex-col gap-6">
-					<div class="text-2xl font-bold">
+					<div class="text-base lg:text-xl font-bold">
 						Track Business Expenses until its Millisecond
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Tick class="shrink-0" />
 						<div>
 							Analyze your business cost easily with group
 							transaction through tagging feature.
 						</div>
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Tick class="shrink-0" />
 						<div>
 							Add more than one card for payment. Integrated with
@@ -469,7 +468,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 							payment.
 						</div>
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Tick class="shrink-0" />
 						<div>
 							Arrange your business expenses by date, name, etc.,
@@ -480,23 +479,23 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 
 				<!-- Without Spend.in -->
 				<div x-show="tab === 'without'" class="flex flex-col gap-6">
-					<div class="text-2xl font-bold">
+					<div class="text-base lg:text-xl font-bold">
 						Taking too long to tidy up administrative files makes it
 						unproductive
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Close class="shrink-0" /><div>
 							Complex recording process due to every
 							administrative file in a different place.
 						</div>
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Close class="shrink-0" /><div>
 							Need more effort to pay manually one by one invoice
 							because there is no payment accommodation.
 						</div>
 					</div>
-					<div class="flex gap-3">
+					<div class="flex gap-3 text-xs lg:text-lg">
 						<Close class="shrink-0" /><div>
 							Manual data arranging needs a long time because the
 							different months/years are not in the same place.
@@ -533,104 +532,110 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 
 		<!-- Content wrapper -->
 		<div
-			class="relative z-10 max-w-6xl mx-auto px-7 text-primary-0 text-center"
+			class="relative z-10 max-w-6xl mx-auto px-7 text-primary-0 text-left lg:text-center"
 		>
 			<!-- Header -->
 			<div class="mb-12">
-				<div class="text-primary-500 tracking-wide uppercase">
+				<div class="text-primary-500 font-semibold text-xs lg:text-lg tracking-wide uppercase">
 					WHAT THEY SAY
 				</div>
-				<h2 class="text-3xl md:text-4xl font-bold mt-2">
+				<h2 class="text-xl lg:text-3xl font-bold mt-2">
 					Our User Kind Words
 				</h2>
-				<p class="text-secondary-300 mt-4 max-w-2xl mx-auto">
+				<p class="text-sm lg:text-lg text-secondary-300 mt-4 max-w-2xl mx-auto">
 					Here are some testimonials from our users after using
 					Spend.in to manage their business expenses.
 				</p>
 			</div>
 
 			<!-- Testimonials Grid -->
-			<div
-				class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left bg-background"
-			>
-				<!-- Card 1 -->
-				<div
-					class="bg-secondary rounded-2xl p-6 flex flex-col gap-4 shadow-lg"
-				>
-					<p class="text-lg font-semibold">It’s just incredible!</p>
-					<p class="text-secondary-100">
-						It’s much more fun using Spend.in to manage my business
-						expenses. It is now much easier to justify business
-						finances to management than before. Thanks to Spend.in!
-					</p>
-					<div class="flex items-center gap-3 mt-4">
-						<Jimmy class="w-12 h-12 rounded-sm" />
-						<div class="text-left">
-							<div class="font-bold">Jimmy Bartney</div>
-							<div class="text-sm text-secondary-400">
-								Product Manager at Picko Lab
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left bg-background">
+  <!-- Card 1 -->
+  <div class="bg-secondary-500 rounded-2xl p-6 flex flex-col h-full shadow-lg gap-6 ">
+    <p class="text-base lg:text-lg font-semibold">It’s just incredible!</p>
+    <p class="text-sm lg:text-base text-secondary-100 mt-2">
+      It’s much more fun using Spend.in to manage my business
+      expenses. It is now much easier to justify business
+      finances to management than before. Thanks to Spend.in!
+    </p>
 
-				<!-- Card 2 -->
-				<div
-					class="bg-secondary rounded-2xl p-6 flex flex-col gap-4 shadow-lg"
-				>
-					<p class="text-lg font-semibold">Satisfied User Here!</p>
-					<p class="text-secondary-100">
-						Never thought that with Spend.in, managing business
-						expenses would be this fun. I’ve been using this
-						platform for 3 months and still counting!
-					</p>
-					<div class="flex items-center gap-3 mt-4">
-						<Natasha class="w-12 h-12 rounded-sm" />
-						<div class="text-left">
-							<div class="font-bold">Natasha Romanoff</div>
-							<div class="text-sm text-secondary-400">
-								Black Widow
-							</div>
-						</div>
-					</div>
-				</div>
+    <!-- Author -->
+    <div class="mt-auto pt-6 border-t-2 border-secondary-300">
+      <div class="flex items-center gap-3">
+        <Jimmy class="w-12 h-12 rounded-sm" />
+        <div class="text-left">
+          <div class="text-base lg:text-lg font-bold">Jimmy Bartney</div>
+          <div class="text-xs lg:text-sm text-secondary-400">
+            Product Manager at Picko Lab
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-				<!-- Card 3 -->
-				<div
-					class="bg-secondary rounded-2xl p-6 flex flex-col gap-4 shadow-lg"
-				>
-					<p class="text-lg font-semibold">
-						No doubt, Spend.In is the best!
-					</p>
-					<p class="text-secondary-100">
-						“No doubt, Spend.in is the best! There isn’t that I want
-						to say to this platform, other than thanks for making my
-						business expenses less tiring. Very recommended to you
-						who have a big business!”
-					</p>
-					<div class="flex items-center gap-3 mt-4">
-						<Moritika class="w-12 h-12 rounded-sm" />
-						<div class="text-left">
-							<div class="font-bold">Moritika Kazuki</div>
-							<div class="text-sm text-secondary-400">
-								Finance Manager at Mangan
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+  <!-- Card 2 -->
+  <div class="bg-secondary-500 rounded-2xl p-6 flex flex-col h-full shadow-lg gap-6 ">
+    <p class="text-base lg:text-lg font-semibold">Satisfied User Here!</p>
+    <p class="text-sm lg:text-base text-secondary-100 mt-2">
+      Never thought that with Spend.in, managing business
+      expenses would be this fun. I’ve been using this
+      platform for 3 months and still counting!
+    </p>
+
+    <!-- Author -->
+    <div class="mt-auto pt-6 border-t-2 border-secondary-300">
+      <div class="flex items-center gap-3">
+        <Natasha class="w-12 h-12 rounded-sm" />
+        <div class="text-left">
+          <div class="text-base lg:text-lg font-bold">Natasha Romanoff</div>
+          <div class="text-xs lg:text-sm text-secondary-400">Black Widow</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="bg-secondary-500 rounded-2xl p-6 flex flex-col h-full shadow-lg gap-6 ">
+    <p class="text-base lg:text-lg font-semibold">
+      No doubt, Spend.In is the best!
+    </p>
+    <p class="text-sm lg:text-base text-secondary-100 mt-2">
+      No doubt, Spend.in is the best! There isn’t that I want
+      to say to this platform, other than thanks for making my
+      business expenses less tiring. Very recommended to you
+      who have a big business!
+    </p>
+
+    <!-- Author -->
+    <div class="mt-auto pt-6 border-t-2 border-secondary-300">
+      <div class="flex items-center gap-3">
+        <Moritika class="w-12 h-12 rounded-sm" />
+        <div class="text-left">
+          <div class="text-base lg:text-lg font-bold">Moritika Kazuki</div>
+          <div class="text-xs lg:text-sm text-secondary-400">
+            Finance Manager at Mangan
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 			<div class="flex gap-6 justify-center py-10">
-				<div
-					class="flex bg-secondary w-[48px] h-[50px] items-center justify-center rounded-full"
-				>
-					<Arrowleft />
-				</div>
-				<div
-					class="flex bg-primary-500 shadow-primary-500 shadow-2xl w-[48px] h-[50px] items-center justify-center rounded-full"
-				>
-					<Arrowright />
-				</div>
-			</div>
+  <!-- Prev Button -->
+  <button
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 hover:bg-secondary-400 transition cursor-pointer"
+  >
+    <Arrowleft class="w-5 h-5 text-white" />
+  </button>
+
+  <!-- Next Button -->
+  <button
+    class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-500 shadow-2xl shadow-primary-500 hover:bg-primary-400 transition cursor-pointer"
+  >
+    <Arrowright class="w-5 h-5 text-white" />
+  </button>
+</div>
 		</div>
 	</section>
 
@@ -638,10 +643,10 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 	<section class="flex flex-col items-center py-30 px-4 font-primary">
 		<div class="mx-auto text-center mb-12 flex flex-col items-center">
 			<div class="flex flex-col gap-6 mb-1">
-				<h2 class="text-4xl font-bold text-gray-800">
+				<h2 class="text-xl lg:text-3xl font-bold text-gray-800">
 					Ready to Get Started?
 				</h2>
-				<p class="text-secondary-400">
+				<p class="text-sm lg:text-lg text-secondary-400">
 					Choose a plan that suits your business needs
 				</p>
 			</div>
@@ -673,7 +678,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 			</div>
 
 			<!-- Save Badge + Arrow -->
-			<div></div>
+			<div ></div>
 			<div
 				class="flex bg-primary-100 rounded-full justify-center text-secondary-700 text-sm px-3 py-1"
 			>
@@ -695,24 +700,23 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				<div class="flex flex-col text-left mb-6 gap-3">
 					<div class="flex gap-3">
 						<Free />
-						<h3 class="text-3xl font-bold text-secondary-700">
+						<h3 class="text-xl lg:text-2xl font-bold text-secondary-700">
 							Free
 						</h3>
 					</div>
-					<p class="text-secondary-400">
+					<p class="text-sm lg:text-base text-secondary-400">
 						Perfect plan to get started
 					</p>
 				</div>
 				<div class="flex items-center mb-4">
 					<span
-						class="price-value monthly text-5xl font-bold text-secondary-700"
-						>$0</span
-					>
-					<span class="price-period text- text-secondary-400"
+						class="price-value monthly text-3xl font-bold text-secondary-700"
+						>$0</span>
+					<span class="price-period text-sm lg:text-base text-secondary-400"
 						>/month</span
 					>
 				</div>
-				<p class="text-secondary-500 text-left text-sm mb-6">
+				<p class="text-secondary-500 text-sm lg:text-base text-left mb-6">
 					A free plan grants you access to some cool features of Speed
 					in.
 				</p>
@@ -720,27 +724,27 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				<ul
 					class="flex flex-col items-start w-full gap-6 text-secondary-700 mb-8"
 				>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Sync across device
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						5 workspace
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Collaborate with 5 user
 					</li>
-					<li class="flex items-center gap-2 text-secondary-400">
+					<li class="flex text-sm lg:text-base items-center gap-2 text-secondary-400">
 						<Close class="w-6 h-6 fill-currentColor" />
 						Sharing permission
 					</li>
-					<li class="flex items-center gap-2 text-secondary-400">
+					<li class="flex text-sm lg:text-base items-center gap-2 text-secondary-400">
 						<Close fill="current" />
 						Admin tools
 					</li>
-					<li class="flex items-center gap-2 text-secondary-400">
+					<li class="flex text-sm lg:text-base items-center gap-2 text-secondary-400">
 						<Close fill="current" />
 						100+ integrations
 					</li>
@@ -760,7 +764,7 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 					<div class="flex justify-between w-full">
 						<div class="flex gap-3">
 							<Pro />
-							<h3 class="text-3xl font-bold text-secondary-700">
+							<h3 class="text-xl lg:text-2xl font-bold text-secondary-700">
 								Pro
 							</h3>
 						</div>
@@ -770,20 +774,20 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 							Popular
 						</div>
 					</div>
-					<p class="text-secondary-400">
+					<p class="text-sm lg:text-base text-secondary-400">
 						Perfect plan for professionals!
 					</p>
 				</div>
 				<div class="flex items-center mb-4">
 					<span
-						class="price-value monthly text-5xl font-bold text-secondary-700"
+						class="price-value monthly text-2xl lg:text-3xl font-bold text-secondary-700"
 						>$12</span
 					>
-					<span class="price-period text- text-secondary-400"
+					<span class="price-period text-sm lg:text-base text-secondary-400"
 						>/month</span
 					>
 				</div>
-				<p class="text-secondary-500 text-left text-sm mb-6">
+				<p class="text-secondary-500 text-sm lg:text-base text-left mb-6">
 					For professional only! Start arranging your expenses with
 					our best templates.
 				</p>
@@ -791,27 +795,27 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				<ul
 					class="flex flex-col items-start w-full gap-6 text-secondary-700 mb-8"
 				>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Everything in Free Plan
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Unlimited workspace
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Collaborative workspace
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick class="w-6 h-6 fill-currentColor" />
 						Sharing permission
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick fill="current" />
 						Admin tools
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick fill="current" />
 						100+ integrations
 					</li>
@@ -832,25 +836,25 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 					<div class="flex justify-between w-full">
 						<div class="flex gap-3">
 							<Ultimate />
-							<h3 class="text-3xl font-bold text-secondary-700">
+							<h3 class="text-xl lg:text-2xl font-bold text-secondary-700">
 								Ultimate
 							</h3>
 						</div>
 					</div>
-					<p class="text-secondary-400">
+					<p class="text-sm lg:text-base text-secondary-400">
 						Best suits for great company!
 					</p>
 				</div>
 				<div class="flex items-center mb-4">
 					<span
-						class="price-value monthly text-5xl font-bold text-secondary-700"
+						class="price-value monthly text-2xl lg:text-3xl font-bold text-secondary-700"
 						>$33</span
 					>
-					<span class="price-period text- text-secondary-400"
+					<span class="price-period text-sm lg:text-base text-secondary-400"
 						>/month</span
 					>
 				</div>
-				<p class="text-secondary-500 text-left text-sm mb-6">
+				<p class="text-secondary-500 text-sm lg:text-base text-left mb-6">
 					If you a finance manager at big company, this plan is a
 					perfect match.
 				</p>
@@ -858,27 +862,27 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 				<ul
 					class="flex flex-col items-start w-full gap-6 text-secondary-700 mb-8"
 				>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Everything in Pro Plan
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Daily performance reports
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick />
 						Dedicated assistant
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick class="w-6 h-6 fill-currentColor" />
 						Artificial intelligence
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick fill="current" />
 						Marketing tools & automations
 					</li>
-					<li class="flex items-center gap-2">
+					<li class="flex text-sm lg:text-base items-center gap-2">
 						<Tick fill="current" />
 						Advanced security
 					</li>
@@ -893,42 +897,45 @@ import SpendindStats from "../assets/images/spendingstats.svg";
 	</section>
 
 	<!-- Call to action -->
-	<section
-		id="works2"
-		class="relative flex justify-center bg-secondary-700 pt-30 font-primary text-primary-0 text-xl"
-	>
-		<div
-			class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center w-full max-w-[1200px] pl-7"
-		>
-			<div class="order-1 flex flex-col text-left gap-11 lg:pb-20">
-				<!-- Left card -->
-				<div
-					class="flex flex-col justify-start mx-auto text-left gap-6 w-full max-w-7xl text-primary"
-				>
-					<div class="text-primary-500 tracking-wide">
-						DOWNLOAD NOW!
-					</div>
-					<div class="text-4xl font-bold leading-snug text-primary">
-						Start Track Your Business<br />Expenses Today
-					</div>
-					<div class="text-secondary-400">
-						Are you ready to make your business more organized?
-						Download Spend.In now!
-					</div>
-				</div>
-				<button
-					class="flex bg-primary-500 rounded-full items-center justify-center text-base w-[187px] px-6 py-3"
-				>
-					Get a Free Demo
-				</button>
-			</div>
+    <section
+        id="works2"
+        class="flex max-lg:flex-col gap-8 bg-secondary-700 font-primary text-primary-0 text-xl"
+    >
+        <div
+            class="flex flex-col items-center justify-center text-left gap-11 lg:w-3/5"
+        >
+            <!-- Left card container -->
+            <div class="ml-[max(calc(50vw-600px)-1.5rem,0rem)] p-6">
+                <div
+                    class="flex flex-col justify-start text-left gap-6 text-primary"
+                >
+                    <div class="text-primary-500  tracking-wide">
+                        DOWNLOAD NOW!
+                    </div>
+                    <div class="text-4xl font-bold leading-snug text-primary">
+                        Start Track Your Business<br />Expenses Today
+                    </div>
+                    <div class="text-secondary-400">
+                        Are you ready to make your business more organized?
+                        Download Spend.In now!
+                    </div>
+					<button
+                    class="flex bg-primary-500 rounded-full items-center justify-center text-base w-[187px] px-6 py-3 hover:bg-primary-400 transition cursor-pointer"
+                >
+                    Get a Free Demo
+                </button>
+                </div>
+                
+            </div>
+        </div>
 
-			<!-- Right card -->
-			<div
-				class="lg:absolute bottom-0 right-0 order-2 flex justify-start"
-			>
-				<SpendindStats class="w:3/4 h-auto lg:h-3/4 lg:w-auto" />
-			</div>
-		</div>
-	</section>
+        <!-- Right card -->
+        <div class="shrink-0 lg:w-2/5 pt-16 pl-7 lg:pl-0 ">
+            <SpendindStats class="size-full" />
+        </div>
+    </section>
+
+
+
+  
 </Layout>
